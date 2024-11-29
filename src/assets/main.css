@@ -1,35 +1,19 @@
-@import 'base.css';
+@import "minireset.min.css";
+@import "typography.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+:root {
+  --color-bg: oklch(88.7% 0.0338 143.9);
+  --color-shadow: oklch(81.63% 0.0197 119.82);
+  --color-card-bg: oklch(87.99% 0.0405 244.82);
+  --color-selected: oklch(91.4% 0.0405 244.82);
+  --color-card-border: oklch(48.95% 0.0542 243.52);
+  --color-text: oklch(44.76% 0.0946 244.41);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+body {
+  background: var(--color-bg);
 }
