@@ -1,5 +1,6 @@
 @import "minireset.min.css";
 @import "typography.css";
+@import "components.css";
 
 :root {
   --color-bg: oklch(88.7% 0.0338 143.9);

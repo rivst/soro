@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { addTask } from '@/lib/util'
+import { ref } from 'vue'
 
 import { Plus } from 'lucide-vue-next';
 
+import NewTaskInput from '@/components/NewTaskInput.vue'
+
+const isActivated = ref(false)
 </script>
 
 <template>
-  <button @click="addTask">
-    <Plus/>
+  <NewTaskInput v-if="isActivated"/>
+  <button @click="isActivated = true" v-else>
+    <Plus stroke-width="2.5"/>
   </button>
 </template>
 
